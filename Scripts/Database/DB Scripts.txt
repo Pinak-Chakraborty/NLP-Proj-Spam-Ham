@@ -1,0 +1,20 @@
+SQLITE3 test.db
+
+sqlite3>
+CREATE TABLE TOT_TAB (
+NAME TEXT PRIMARY KEY NOT NULL,
+COUNT INTEGER
+);
+
+sqlite3>
+CREATE TABLE WORD_TAB (
+NAME TEXT,
+WORD TEXT, 
+COUNT INTEGER,
+PRIMARY KEY (NAME, WORD)
+);
+
+SQLITE3 test.db
+sqlite> .separator " "
+sqlite> .import outtot TOT_TAB
+sqlite> .import outword WORD_TAB
